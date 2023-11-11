@@ -1,43 +1,47 @@
-# Java Interview Assignment
-Spring Boot application that will be used by our candidates to implement interview assignment.
+# Library Automation System
 
-## Dependencies
-This project relies mainly on Spring Boot. Mainly:
-  - Spring Data JPA
-  - Spring Security
-  - Spring Web
-  
-Full list of dependencies can be found in [pom.xml][1].
+## Project Overview
 
-## Requirements:
-  - Candidates expected to implement required features based on provided scenario
-  - Each implementation should be equipped with unit tests
-  - Integration tests are require to demonstrate API usages
+This Library Management System is developed using Java and Spring Boot, focusing on efficient backend operations for library automation. The project includes features for managing books and members, with a robust security configuration, and utilizes the H2 database for data storage.
 
-### Scenario
-The are two roles in the system; `LIBRARIAN` and `MEMBER`
+## Project Design
 
-#### As a Librarian
-  - I can add, update, and remove Books from the system
-  - I can add, update, view, and remove Member from the system
-  
-#### As a Member
-  - I can view, borrow, and return available Books
-  - Once a book is borrowed, its status will change to `BORROWED`
-  - Once a book is returned, its status will change to `AVAILABLE`
-  - I can delete my own account
+The project is designed as a backend-only application, providing a scalable solution for library automation. Leveraging Java and the Spring Boot framework, it ensures a clean and efficient design for handling library operations.
 
-## Nice to Have:
-It will be an advantage for candidates to demonstrate the following:
+## Technology Stack
 
-  - proper usage of Http Methods and REST practices
-  - understanding of [SOLID Principle][2]
-  - understanding of Design patterns
-  - understanding of TDD and BDD
+- Java
+- Spring Boot
+- H2 Database
 
-## Submission:
-Candidates can submit their assignments via:
-  - Pull Request
+## Features
 
-[1]: pom.xml
-[2]: https://en.wikipedia.org/wiki/SOLID
+### Librarian Role
+
+- Add, update, and remove books from the system.
+- Add, update, view, and remove members from the system.
+
+### Member Role
+
+- View available books.
+- Borrow and return available books.
+- Book status changes to BORROWED upon borrowing and AVAILABLE upon return.
+- Delete your own account.
+
+### Security Configuration
+
+The project implements a secure authentication system using Spring Security. This ensures that only authorized users (librarians and members) can access and perform library operations.
+
+### Database
+
+The H2 database is utilized to store the necessary data for efficient library management. This in-memory database allows for seamless testing and development.
+
+## Testing
+
+The project incorporates unit tests to ensure the reliability and functionality of individual components. The unit tests cover various aspects of the application, verifying that each part behaves as expected.
+
+## Getting Started
+
+1. Clone the repository.
+   ```bash
+   git clone https://github.com/AhmedBaabbad/LibraryAutomation.git
